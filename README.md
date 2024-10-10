@@ -50,7 +50,7 @@ Se anima a otros a contribuir a este proyecto mediante issues o pull requests en
 
 ## Contacto
 
-Para preguntas o comentarios, por favor contacta a [Sergio Chalela](mailto:tuemail@ejemplo.com).
+Para preguntas o comentarios, por favor contacta a [Sergio Chalela](sergiochalela99@gmail.com).
 
 ## Licencia
 

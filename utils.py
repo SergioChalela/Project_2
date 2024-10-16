@@ -109,7 +109,7 @@ for name, df in zip(['apple_annual', 'amazon_annual', 'google_annual', 'meta_ann
     print(df.head(), "\n")
 
 
-
+# crear las tablas de cada compañia con los filtros aplciados para luego graficarlas
 def create_grafico_general(df, close_column, company_name):
     company_grafico_general = df[[close_column]].copy()
     company_grafico_general['Year'] = company_grafico_general.index.year

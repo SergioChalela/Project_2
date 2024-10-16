@@ -283,3 +283,30 @@ plt.xticks(rotation=45)
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+
+# Valores cercanos a 1: Indican que las compañías tienden a moverse juntas (positivamente correlacionadas).
+# Valores cercanos a -1: Indican que las compañías tienden a moverse en direcciones opuestas (negativamente correlacionadas).
+# Valores cercanos a 0: Indican poca o ninguna relación entre las compañías.
+
+# Crear un nuevo DataFrame con los precios de cierre de cada compañía
+closing_prices = covid_table[['apple_percent_change', 'amazon_percent_change', 'google_percent_change',
+                              'meta_percent_change', 'microsoft_percent_change', 'nvidia_percent_change',
+                              'tesla_percent_change']]
+
+# Renombrar las columnas para que sean más claras
+closing_prices.columns = ['Apple', 'Amazon', 'Google', 'Meta', 'Microsoft', 'Nvidia', 'Tesla']
+
+# Calcular la matriz de correlación
+correlation_matrix = closing_prices.corr()
+
+# Crear el heatmap de correlación
+plt.figure(figsize=(10, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, linewidths=.5)
+
+# Configurar el gráfico
+plt.title('Matriz de Correlación de las Magnificent 7')
+plt.show()
+
+
